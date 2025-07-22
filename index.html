@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Центр лечения зависимостей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  header {
+    background: #2c3e50;
+    color: white;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    height: 60px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  /* Отзывы */
+  .reviews {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .review-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .review-card h4 {
+    margin-bottom: 5px;
+  }
+
+  .review-card small {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+  }
+
+  .review-card p {
+    font-size: 14px;
+    color: #444;
+  }
+
+  @media (max-width: 768px) {
+    .info-block {
+      flex-direction: column !important;
+    }
+
+    .info-block img, .info-block .text {
+      flex: 1 1 100% !important;
+    }
+
+    .form-section, .review-card {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    header, nav {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 10px;
+    }
+
+    .logo h1 {
+      font-size: 18px;
+    }
+
+    nav a {
+      padding: 5px 0;
+    }
+  }
+
+      .help-blocks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        justify-items: center;
+        margin: 40px 0;
+      }
+
+      .help-block {
+        background: #eaf6fd;
+        padding: 30px 20px;
+        border-radius: 10px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #18bc9c;
+    }
+
+    .contacts {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contacts a {
+      color: white;
+      font-size: 20px;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      height: 100%;
+      transition: transform 1s ease;
+    }
+
+    .slides img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .category-section {
+      background: #fff;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .category-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      position: relative;
+      background: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .category:hover {
+      background: #34495e;
+    }
+
+    .subcategory {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 180px;
+      padding: 10px;
+      z-index: 10;
+    }
+
+    .subcategory li {
+      list-style: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .subcategory li:hover {
+      background: #f0f0f0;
+    }
+
+    .category:hover .subcategory {
+      display: block;
+    }
+
+    .main-content {
+      padding: 20px;
+      background: #fff;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+
+    .article {
+      margin-bottom: 20px;
+    }
+
+    .article h3 {
+      margin-bottom: 10px;
+    }
+
+    .info-block {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 50px 0;
+      flex-wrap: wrap;
+    }
+
+    .info-block.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .info-block img {
+      flex: 1 1 300px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .info-block .text {
+      flex: 1 1 300px;
+    }
+        .help-blocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .help-block {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .help-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .help-block img {
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+    .help-block h3 {
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .help-block p {
+      color: #333;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .three-boxes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .three-boxes > div {
+      flex: 1 1 300px;
+      padding: 20px;
+      border-radius: 10px;
+      color: #333;
+    }
+
+    .box1 {
+      background: #ecf0f1;
+    }
+
+    .box2 {
+      background: #dff9fb;
+    }
+
+    .box3 {
+      background: #f9ca24;
+    }
+
+    .doctors-section {
+      margin-top: 60px;
+      padding: 20px;
+    }
+
+    .doctors-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .doctor-card {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 15px;
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .doctor-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .doctor-card h4 {
+      margin: 15px 0 10px;
+      font-size: 18px;
+    }
+
+    .doctor-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-section {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-section button {
+      background: #2c3e50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form-section button:hover {
+      background: #34495e;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      header, nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .category-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo1.png" alt="Логотип">
+      <h1>Центр лечения</h1>
+    </div>
+    <nav>
+      <a href="#">Главная</a>
+      <a href="#">Цены</a>
+      <a href="#">Статьи</a>
+      <a href="#">Контакты</a>
+    </nav>
+    <div class="contacts">
+      <span>+7 (777) 777-77-77</span>
+      <a href="https://t.me/username"><i class="fab fa-telegram"></i></a>
+      <a href="https://wa.me/77777777777"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </header>
+
+  <section class="slider">
+    <div class="slides" id="slides">
+      <img src="slider1.jpg" alt="Slide 1">
+      <img src="slider2.jpg" alt="Slide 2">
+      <img src="slider3.jpg" alt="Slide 3">
+    </div>
+  </section>
+
+  <section class="category-section">
+    <div class="category-container">
+      <div class="category">Алкоголизм
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Методы</li>
+        </ul>
+      </div>
+      <div class="category">Наркомания
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Симптомы</li>
+        </ul>
+      </div>
+      <div class="category">Игромания
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Последствия</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="help-blocks">
+    <div class="help-block">
+      <img src="doc.png" alt="Врач">
+      <h3>Быстрый вызов врача</h3>
+      <p>Круглосуточная анонимная помощь. Врач приезжает в течение часа.</p>
+    </div>
+    <div class="help-block">
+      <img src="cod.png" alt="Кодирование">
+      <h3>Кодирование</h3>
+      <p>Проводим процедуру кодирования на дому, в стационаре и амбулаторно.</p>
+    </div>
+    <div class="help-block">
+      <img src="house.png" alt="Стационар">
+      <h3>Лечение в стационаре</h3>
+      <p>Комфортабельный стационар с возможностями диагностики и лечения.</p>
+    </div>
+    <div class="help-block">
+      <img src="diagnoz.png" alt="Диагностика">
+      <h3>Диагностика</h3>
+      <p>Обследование (анализы, ЭКГ, УЗИ) для качественного лечения.</p>
+    </div>
+    <div class="help-block">
+      <img src="tria.png" alt="Психотерапия">
+      <h3>Консультация психотерапевта</h3>
+      <p>Квалифицированная помощь в сложных ситуациях.</p>
+    </div>
+    <div class="help-block">
+      <img src="head.png" alt="Психиатрия">
+      <h3>Лечение психических расстройств</h3>
+      <p>Круглосуточное наблюдение и лечение в стационаре.</p>
+    </div>
+  </section>
+
+  <section class="main-content">
+
+    <div class="article">
+      <h3>Методы лечения алкоголизма</h3>
+      <p>Лечение алкоголизма требует комплексного подхода, включающего медицинскую помощь, психологическую поддержку и социальную адаптацию.</p>
+    </div>
+    <div class="article">
+      <h3>Симптомы и признаки наркомании</h3>
+      <p>Основные симптомы: частая смена настроения, потеря веса, проблемы с законом, изоляция от семьи.</p>
+    </div>
+
+    <div class="info-block">
+      <img src="info1.jpg" alt="Инфо 1">
+      <div class="text">
+        <h3>Индивидуальный подход к каждому пациенту</h3>
+        <p>Мы разрабатываем персонализированные программы лечения, учитывая физическое и психическое состояние каждого пациента.</p>
+      </div>
+    </div>
+
+    <div class="info-block reverse">
+      <img src="info2.jpg" alt="Инфо 2">
+      <div class="text">
+        <h3>Поддержка на всех этапах</h3>
+        <p>Наша команда сопровождает пациента от детоксикации до полной реабилитации и социальной адаптации.</p>
+      </div>
+    </div>
+
+    <div class="three-boxes">
+      <div class="box1">
+        <h4>Стационарное лечение</h4>
+        <p>Комфортные условия, круглосуточное наблюдение, индивидуальный подход.</p>
+      </div>
+      <div class="box2">
+        <h4>Консультации онлайн</h4>
+        <p>Быстрая помощь и поддержка без выхода из дома, анонимно и конфиденциально.</p>
+      </div>
+      <div class="box3">
+        <h4>Программа "Шаг за шагом"</h4>
+        <p>Пошаговый выход из зависимости по проверенной методике в сопровождении психолога.</p>
+      </div>
+    </div>
+
+    <div class="doctors-section">
+      <h2 style="text-align: center; margin: 50px 0 30px;">Наши специалисты</h2>
+      <div class="doctors-container">
+        <div class="doctor-card">
+          <img src="doc1.jpg" alt="Врач 1">
+          <h4>Иванов Иван Иванович</h4>
+          <p>Психотерапевт. Более 10 лет опыта в лечении зависимостей.</p>
+        </div>
+        <div class="doctor-card">
+          <img src="doc1.jpg" alt="Врач 2">
+          <h4>Петрова Мария Сергеевна</h4>
+          <p>Нарколог, кандидат медицинских наук, автор методики реабилитации.</p>
+        </div>
+        <div class="doctor-card">
+          <img src="doc1.jpg" alt="Врач 3">
+          <h4>Сидоров Алексей Павлович</h4>
+          <p>Врач-психиатр. Помог более 500 пациентам вернуться к нормальной жизни.</p>
+        </div>
+        <div class="doctor-card">
+          <img src="doc1.jpg" alt="Врач 4">
+          <h4>Кузнецова Елена Владимировна</h4>
+          <p>Специалист по работе с подростками. Индивидуальный подход.</p>
+        </div>
+        <div class="doctor-card">
+          <img src="doc1.jpg" alt="Врач 5">
+          <h4>Григорьев Дмитрий Олегович</h4>
+          <p>Специалист по игромании. Автор статей и программ помощи.</p>
+        </div>
+        <div class="doctor-card">
+          <img src="doc1.jpg" alt="Врач 6">
+          <h4>Алексеева Наталья Юрьевна</h4>
+          <p>Консультант по зависимостям. Проводит тренинги и вебинары.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="reviews">
+  <div class="review-card">
+    <h4>Анна К.</h4>
+    <small>12 марта 2024</small>
+    <p>Очень благодарна клинике! Помогли выйти из сложной ситуации. Рекомендую всем, кто ищет помощь.</p>
+  </div>
+  <div class="review-card">
+    <h4>Виктор П.</h4>
+    <small>20 января 2025</small>
+    <p>Отличные специалисты, внимательное отношение и профессиональный подход.</p>
+  </div>
+  <div class="review-card">
+    <h4>Марина С.</h4>
+    <small>5 февраля 2025</small>
+    <p>Прошла курс лечения — результат превзошёл все ожидания. Спасибо!</p>
+  </div>
+  <div class="review-card">
+    <h4>Александр Ж.</h4>
+    <small>30 декабря 2024</small>
+    <p>Клиника помогла вернуть семью и здоровье. Спасибо всем врачам!</p>
+  </div>
+  <div class="review-card">
+    <h4>Елена Б.</h4>
+    <small>15 ноября 2024</small>
+    <p>Очень уютная атмосфера и отличные условия. Отзывчивый персонал.</p>
+  </div>
+  <div class="review-card">
+    <h4>Руслан Д.</h4>
+    <small>2 октября 2024</small>
+    <p>Понравился индивидуальный подход. Все объяснили, поддержали. Благодарен.</p>
+  </div>
+</section>
+  <section class="form-section">
+    <h2>Связаться с нами</h2>
+    <form>
+      <input type="text" placeholder="Ваше имя">
+      <input type="email" placeholder="Ваш Email">
+      <textarea placeholder="Ваше сообщение"></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+    <p>Тел: +7 (777) 777-77-77 | <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a> <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a></p>
+  </footer>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(-${index * 100}vw)`;
+    }, 10000);
+  </script>
+</body>
+</html>
