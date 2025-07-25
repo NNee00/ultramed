@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Лечение алкоголизма | Центр лечения зависимостей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 60px;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 5px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      top: 0;
+      height: 60px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #18bc9c;
+    }
+    .contacts {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contacts a {
+      color: white;
+      font-size: 20px;
+    }
+
+    .category-section {
+      background: #fff;
+      width: 100%;
+      padding: 20px;
+    }
+    .category-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .category {
+      position: relative;
+      background: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .category:hover {
+      background: #34495e;
+    }
+    .subcategory {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      min-width: 180px;
+      padding: 10px;
+      z-index: 10;
+    }
+    .subcategory li {
+      list-style: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .subcategory li:hover {
+      background: #f0f0f0;
+    }
+    .subcategory li a {
+      color: #333;
+      text-decoration: none;
+    }
+    .category:hover .subcategory {
+      display: block;
+    }
+
+    .main-content {
+      padding: 20px;
+      background: #fff;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+    .main-content h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      color: #2c3e50;
+      text-align: center;
+    }
+    .info-block {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 50px 0;
+      flex-wrap: wrap;
+    }
+    .info-block.reverse {
+      flex-direction: row-reverse;
+    }
+    .info-block img {
+      flex: 1 1 300px;
+      max-width: 500px;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .info-block .text {
+      flex: 1 1 300px;
+    }
+    .info-block h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .three-boxes {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    .three-boxes > div {
+      flex: 1 1 300px;
+      padding: 20px;
+      border-radius: 10px;
+      color: #333;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    .box1 { background: #ecf0f1; }
+    .box2 { background: #dff9fb; }
+    .box3 { background: #f9ca24; }
+
+    .reviews {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .review-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .review-card h4 {
+      margin-bottom: 5px;
+    }
+    .review-card small {
+      display: block;
+      margin-bottom: 10px;
+      color: #777;
+    }
+    .review-card p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .form-section {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .form-section h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2c3e50;
+    }
+    .form-section input,
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-section button {
+      background: #2c3e50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .form-section button:hover {
+      background: #34495e;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      text-decoration: none;
+      margin-left: 10px;
+      font-size: 18px;
+    }
+.call-doctor {
+  background: #f9f9f9;
+  border-left: 5px solid #2c3e50;
+  margin: 40px 0;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.call-doctor h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.call-doctor p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.call-button {
+  display: inline-block;
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.call-button i {
+  margin-right: 8px;
+}
+
+.call-button:hover {
+  background-color: #34495e;
+}
+.online-help {
+  background: #eaf4f4;
+  padding: 30px 20px;
+  margin: 40px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.online-help h3 {
+  color: #2c3e50;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.online-help p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.messengers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.messenger {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.messenger.telegram {
+  background-color: #0088cc;
+}
+
+.messenger.whatsapp {
+  background-color: #25d366;
+}
+
+.messenger:hover {
+  opacity: 0.9;
+}
+
+.service-areas {
+  background: #fdf6e3;
+  padding: 30px 20px;
+  margin: 40px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.service-areas h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.service-areas ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  color: #555;
+}
+
+.service-areas ul li {
+  margin-bottom: 5px;
+}
+
+.survey-block {
+  background: #f0f3ff;
+  padding: 30px 20px;
+  margin: 40px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.survey-block h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.survey-block p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.survey-button {
+  background: #2c3e50;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.survey-button i {
+  margin-right: 8px;
+}
+
+.survey-button:hover {
+  background: #34495e;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .contacts {
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-block,
+  .info-block.reverse {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .info-block img {
+    max-width: 100%;
+  }
+
+  .three-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 90%;
+  }
+
+  .messengers {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .messenger {
+    width: 90%;
+    text-align: center;
+  }
+
+  .survey-button {
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+  }
+}
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="logo1.png" alt="Логотип">
+    <h1>Центр лечения</h1>
+  </div>
+  <button class="burger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav id="nav-menu">
+    <a href="#">Главная</a>
+    <a href="#home-treatment">На дому</a>
+    <a href="#form">Контакты</a>
+  </nav>
+  <div class="contacts">
+    <span>+7 (777) 777-77-77</span>
+    <a href="https://t.me/username"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me/77777777777"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</header>
+
+  <section class="category-section">
+    <div class="category-container">
+      <div class="category">Алкоголизм
+        <ul class="subcategory">
+          <li><a href="#home-treatment">На дому</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#methods">Методы</a></li>
+        </ul>
+      </div>
+      <div class="category">Наркомания
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Симптомы</li>
+        </ul>
+      </div>
+      <div class="category">Игромания
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Последствия</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-content">
+    <h2>Алкоголизм — это болезнь, а не слабость</h2>
+
+    <div class="info-block">
+      <img src="alko1.jpg" alt="Проблема алкоголя">
+      <div class="text">
+        <h3>Что такое алкогольная зависимость?</h3>
+        <p>Алкоголизм — это хроническое заболевание, при котором человек теряет контроль над количеством потребляемого алкоголя. Это не про слабую волю — это биохимическая и психологическая зависимость.</p>
+      </div>
+    </div>
+
+    <div class="info-block reverse">
+      <img src="alko2.jpg" alt="Последствия алкоголя">
+      <div class="text">
+        <h3>Последствия злоупотребления</h3>
+        <p>Злоупотребление алкоголем разрушает здоровье, семью, карьеру и социальные связи. Повреждаются мозг, печень, сердце, повышается риск несчастных случаев и суицидов.</p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <img src="alko3.jpeg" alt="Лечение алкоголизма">
+      <div class="text">
+        <h3>Как мы лечим алкоголизм</h3>
+        <p>В нашем центре мы применяем медикаментозную помощь, психотерапию, кодирование и реабилитационные программы. Все лечение проходит анонимно, с поддержкой опытных врачей и психологов.</p>
+      </div>
+    </div>
+
+    <!-- Новый блок — На дому -->
+    <div id="home-treatment" class="info-block reverse">
+      <img src="home-treatment.jpg" alt="Лечение на дому">
+      <div class="text">
+        <h3>Лечение алкоголизма на дому</h3>
+        <p>Мы предлагаем профессиональную помощь без необходимости госпитализации. Наши специалисты приедут к вам домой, проведут диагностику, детоксикацию и окажут психологическую поддержку в комфортной обстановке.</p>
+      </div>
+    </div>
+<div class="call-doctor">
+  <div class="call-content">
+    <h1>Нужна срочная помощь?</h1>
+    <h3>Нарколог на дом в СПб 24/7 | Срочный вывод из запоя | Ультрамед</h3>
+    <p> Вызов врача за 60 минут. Круглосуточная помощь при алкоголизме. Работаем во всех районах: Московский, Выборгский, Невский.</p>
+    <a href="tel:+77777777777" class="call-button"><i class="fas fa-phone-alt"></i> Вызвать врача</a>
+  </div>
+</div>
+<!-- Новый блок — Онлайн помощь -->
+<div class="online-help">
+  <h3>Онлайн помощь 24/7</h3>
+  <p>Если вы не готовы говорить по телефону — напишите нам в мессенджеры. Наши специалисты ответят в любое время суток.</p>
+  <div class="messengers">
+    <a href="https://t.me/username" target="_blank" class="messenger telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <a href="https://wa.me/77777777777" target="_blank" class="messenger whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</div>
+
+<!-- Новый блок — Районы обслуживания -->
+<div class="service-areas">
+  <h3>Обслуживаем все районы Санкт-Петербурга</h3>
+  <p>Наши специалисты приедут к вам в любой район:</p>
+  <ul>
+    <li>Центральный, Адмиралтейский, Василеостровский</li>
+    <li>Фрунзенский, Московский, Красносельский</li>
+    <li>Выборгский, Калининский, Приморский и др.</li>
+  </ul>
+</div>
+
+<!-- Новый блок — Пройди опрос -->
+<div class="survey-block">
+  <h3>Пройдите короткий опрос и получите индивидуальные рекомендации</h3>
+  <p>Ответьте на несколько простых вопросов, и мы подскажем, с чего начать лечение.</p>
+  <a href="#form" class="survey-button"><i class="fas fa-notes-medical"></i> Пройти опрос</a>
+</div>
+    
+
+    <div class="three-boxes">
+      <div class="box1">
+        <h4>Стадии алкоголизма</h4>
+        <p>От бытового пьянства до полной деградации личности. Чем раньше начато лечение — тем выше шанс на полное выздоровление.</p>
+      </div>
+      <div class="box2">
+        <h4>Помощь родственникам</h4>
+        <p>Мы консультируем семьи, как правильно поддерживать близких и не разрушать себя в процессе помощи.</p>
+      </div>
+      <div class="box3">
+        <h4>Экстренная помощь</h4>
+        <p>Вызов врача на дом, детоксикация и капельницы — в течение часа по вызову в любом районе города.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="review-card">
+      <h4>Ольга Н.</h4>
+      <small>12 марта 2024</small>
+      <p>Благодаря врачам центра мой муж снова стал собой. Спасибо за терпение и профессионализм!</p>
+    </div>
+    <div class="review-card">
+      <h4>Аркадий С.</h4>
+      <small>3 мая 2025</small>
+      <p>Долго не признавал проблему. В центре помогли пройти весь путь — от капельницы до психолога. Рекомендую.</p>
+    </div>
+    <div class="review-card">
+      <h4>Марина П.</h4>
+      <small>28 декабря 2024</small>
+      <p>Хорошее отношение и грамотные специалисты. Без осуждения и с пониманием.</p>
+    </div>
+  </section>
+
+  <section id="form" class="form-section">
+    <h2>Записаться на консультацию</h2>
+    <form>
+      <input type="text" placeholder="Ваше имя" required />
+      <input type="email" placeholder="Ваш Email" required />
+      <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+    <p>Тел: +7 (777) 777-77-77 |
+      <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a>
+      <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a>
+    </p>
+  </footer>
+  <script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('show');
+  }
+</script>
+</body>
+</html>
