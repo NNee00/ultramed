@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Симптомы алкоголизма | Центр лечения зависимостей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="style/alco.css">
+  <style type="text/css">
+    .symptoms-modern {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.symptoms-modern h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.symptom-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.symptom-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.symptom-card.left {
+  transform: translateX(-100px);
+}
+
+.symptom-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.symptom-card .icon {
+  font-size: 40px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="ico/logo1.png" alt="Логотип">
+      <h1>Центр лечения</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="methods.html">На дому</a>
+      <a href="#form">Контакты</a>
+    </nav>
+    <div class="contact-info">
+      <span class="phone">+7 (777) 777-77-77</span>
+      <div class="messengers">
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <button class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+  <section class="category-section">
+    <div class="category-container">
+      <div class="category"><a class="pod_menu_a" href = "alco.html">Алкоголизм</a>
+        <ul class="subcategory">
+          <li><a href="#home-treatment">На дому</a></li>
+          <li><a href="#prices">Цены</a></li>
+          <li><a href="#methods">Методы</a></li>
+        </ul>
+      </div>
+      <div class="category">Наркомания
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Симптомы</li>
+        </ul>
+      </div>
+      <div class="category">Игромания
+        <ul class="subcategory">
+          <li>На дому</li>
+          <li>Цены</li>
+          <li>Последствия</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<section class="symptoms-modern main-content" >
+  <h2>Основные симптомы алкогольной зависимости</h2>
+  <p class="section-subtitle">Физические, психологические и социальные проявления</p>
+
+  <div class="symptom-cards">
+    <div class="symptom-card animate-on-scroll left">
+      <i class="fas fa-heartbeat icon"></i>
+      <h3>Физические симптомы</h3>
+      <p>Покраснение кожи, дрожь рук, сильная потливость, бессонница, судороги, запои и высокая толерантность к спиртному.</p>
+    </div>
+    <div class="symptom-card animate-on-scroll right">
+      <i class="fas fa-brain icon"></i>
+      <h3>Психические нарушения</h3>
+      <p>Раздражительность, депрессия, агрессия, апатия, обман, отрицание зависимости, навязчивое стремление к алкоголю.</p>
+    </div>
+    <div class="symptom-card animate-on-scroll left">
+      <i class="fas fa-users icon"></i>
+      <h3>Социальные проявления</h3>
+      <p>Изоляция, конфликты в семье, потеря работы, проблемы с законом, снижение интереса к жизни и обязанностям.</p>
+    </div>
+  </div>
+
+  <div class="highlighted-cta">
+    <a href="methods.html" class="highlight-button">Перейти к методам лечения</a>
+  </div>
+
+<div class="call-doctor">
+  <div class="call-content">
+    <h1>Нужна срочная помощь?</h1>
+    <h3>Нарколог на дом в СПб 24/7 | Срочный вывод из запоя | Ультрамед</h3>
+    <p> Вызов врача за 60 минут. Круглосуточная помощь при алкоголизме. Работаем во всех районах: Московский, Выборгский, Невский.</p>
+    <a href="tel:+77777777777" class="call-button"><i class="fas fa-phone-alt"></i> Вызвать врача</a>
+  </div>
+</div>
+
+  <div class="three-boxes">
+    <div class="box1">
+      <h4>Последствия алкоголизма</h4>
+      <p>Узнайте, к чему приводит игнорирование симптомов. Физические, психические и социальные разрушения.</p>
+      <a href="consequences.html" class="info-button">Подробнее</a>
+    </div>
+    <div class="box2">
+      <h4>Наши программы лечения</h4>
+      <p>Амбулаторные, стационарные и домашние программы — адаптированы под каждого пациента.</p>
+      <a href="programs.html" class="info-button">Посмотреть</a>
+    </div>
+    <div class="box3">
+      <h4>На главную</h4>
+      <p>Вернуться на главную страницу центра лечения зависимостей.</p>
+      <a href="index.html" class="info-button">Главная</a>
+    </div>
+  </div>
+</section>
+
+<section id="form" class="form-section">
+  <h2>Записаться на консультацию</h2>
+  <form>
+    <input type="text" placeholder="Ваше имя" required />
+    <input type="email" placeholder="Ваш Email" required />
+    <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+    <button type="submit" class="button-primary">Отправить</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+  <p>Тел: +7 (777) 777-77-77 |
+    <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a>
+  </p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.main-nav').classList.toggle('show');
+    document.querySelector('.contact-info').classList.toggle('show');
+  }
+</script>
+<script>
+  function revealOnScroll() {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+</body>
+</html>
