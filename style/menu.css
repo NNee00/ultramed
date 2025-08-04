@@ -1,0 +1,66 @@
+.category-section {
+  background: #fff;
+  padding: 40px 20px;
+  margin-top: 80px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  background: #2c3e50;
+  color: white;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.category-card:hover {
+  background: #34495e;
+  transform: translateY(-5px);
+}
+
+.category-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.category-card a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  transition: 0.2s;
+}
+
+.category-card a:hover {
+  color: #18bc9c;
+  text-decoration: underline;
+}
+
+.category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.category-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.category-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
