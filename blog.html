@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог | Центр лечения зависимостей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style/index_style.css">
+  <link rel="stylesheet" type="text/css" href="style/alco.css">  
+  <link rel="stylesheet" href="style/menu.css">
+  <style>
+    .blog-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .blog-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 20px;
+      flex: 1;
+    }
+
+    .blog-card h3 {
+      font-size: 1.2rem;
+      color: #005bbb;
+      margin-bottom: 10px;
+    }
+
+    .blog-card small {
+      display: block;
+      margin-bottom: 15px;
+      color: #777;
+    }
+
+    .blog-card p {
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #005bbb;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .read-more:hover {
+      background: #004799;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="ico/logo1.png" alt="Логотип">
+      <h1>Центр лечения</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="mission.html">Наша миссия</a>
+      <a href="target.html">Наши цели</a>
+      <a href="prices.html">Цены</a>
+      <a href="blog.html">Блог</a>
+      <a href="onlinecons.html">Онлайн консультирование</a>
+    </nav>
+
+    <div class="contact-info">
+      <span class="phone">+7 (777) 777-77-77</span>
+      <div class="messengers">
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <button class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<section class="category-section">
+  <div class="category-grid">
+    <div class="category-card">
+      <h3><a href="alco.html">Лечение алкоголизм</a></h3>
+      <ul>
+        <li><a href="zapoi.html">выведение из запоя</a></li>
+        <li><a href="coding.html">кодирование</a></li>
+        <li><a href="selfhelp.html">самостоятельное лечение </a></li>
+        <li><a href="articles.html">статьи</a></li>
+        <li><a href="stacionaralco.html">лечение в стационаре</a></li>
+        <li><a href="doctor.html">вызов врача нарколога на дом</a></li>
+        <li><a href="prices.html">программы лечения алкоголизма / цены</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="narkomaniya.html">Лечение наркомании</a></h3>
+      <ul>
+        <li><a href="solevaya.html">лечение солевой зависимости</a></li>
+        <li><a href="mefedron.html">лечение мефедроновой зависимости</a></li>
+        <li><a href="dom.html">Лечение наркомании на дому </a></li>
+        <li><a href="stacionar.html">Лечение наркомании в стационаре </a></li>
+        <li><a href="reabilitaciya.html">Лечение в реабилитации  </a></li>
+        <li><a href="programmy.html">Программы/ цены </a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="ojirenie.html">Лечение ожирения</a></h3>
+      <ul>
+        <li><a href="soputstvuushie.html">Сопутствующие заболевания</a></li>
+        <li><a href="pitanie.html">Питание при ожирении</a></li>
+        <li><a href="programmy_ojir.html">лечебные программы </a></li>
+        <li><a href="online.html">Онлайн введение</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Методы/услуги/ цены </h3>
+      <ul>
+        <li><a href="alco.html">Алкоголизм </a></li>
+        <li><a href="narkomaniya.html">Наркомания  </a></li>
+        <li><a href="ojirenie.html">Ожирение </a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>В какие районы  СПБ и ЛО выезжают наши специалисты</h3>
+      <ul>
+        <li><a href="spd.html">СПБ . Стоимость  0 руб</a></li>
+        <li><a href="lo.html">Ленинградская область</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Почему стоит обратиться к нам</h3>
+      <ul>
+        <li>Подходи индивидуально</li>
+        <li>Анонимно</li>
+        <li>Опыт 30 лет </li>
+        <li>Сопровождение на всех этапах </li>
+        <li>За пациента отвечает один врач</li>
+        <li>Комплексно: лечим и зависимость и созависимость </li>
+        <li>онлайн ведение </li>
+        <li>Обучаем трезвости/ осознанности </li>
+        <li>Помогаем созависимым  </li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Бригадный метод</h3>
+      <ul>
+        <li><a href="brigadniy.html">Что это?</a></li>
+        <li><a href="brigadniy-benefits.html">Преимущества</a></li>
+      </ul>
+    </div>
+        <div class="category-card">
+      <h3>Бригадный метод</h3>
+      <ul>
+        <li><a href="brigadniy.html">Что это?</a></li>
+        <li><a href="brigadniy-benefits.html">Преимущества</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="blog-container">
+  <h2 class="blog-title">Наш блог</h2>
+
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img src="img/alco/alko1.jpg" alt="Алкоголь и здоровье">
+      <div class="blog-card-content">
+        <h3>Как алкоголь влияет на организм</h3>
+        <small>12 марта 2025</small>
+        <p>Разбираем основные последствия употребления алкоголя для здоровья, психики и социальной жизни.</p>
+        <a href="post1.html" class="read-more">Читать далее</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="img/alco/alko3.jpeg" alt="Методы лечения">
+      <div class="blog-card-content">
+        <h3>Современные методы лечения зависимостей</h3>
+        <small>5 марта 2025</small>
+        <p>Какие подходы сегодня используют в мире для борьбы с алкогольной и наркотической зависимостью.</p>
+        <a href="post2.html" class="read-more">Читать далее</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="img/alco/home-treatment.jpg" alt="Семейная поддержка">
+      <div class="blog-card-content">
+        <h3>Роль семьи в лечении зависимого</h3>
+        <small>25 февраля 2025</small>
+        <p>Почему поддержка близких играет ключевую роль и как правильно помогать зависимому человеку.</p>
+        <a href="post3.html" class="read-more">Читать далее</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="img/metods/stots.png" alt="Реабилитация">
+      <div class="blog-card-content">
+        <h3>Этапы реабилитации: что важно знать</h3>
+        <small>10 февраля 2025</small>
+        <p>Реабилитация — это не только лечение, но и восстановление личности. Расскажем про этапы и трудности.</p>
+        <a href="post4.html" class="read-more">Читать далее</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="online-help">
+  <h3>Онлайн помощь 24/7</h3>
+  <p>Если вы не готовы говорить по телефону — напишите нам в мессенджеры. Наши специалисты ответят в любое время суток.</p>
+  <div class="messengers">
+    <a href="https://t.me/username" target="_blank" class="messenger telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <a href="https://wa.me/77777777777" target="_blank" class="messenger whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</div>
+
+<section id="form" class="form-section">
+  <h2>Записаться на консультацию</h2>
+  <form action="send_mail.php" method="POST">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+    <button type="submit" class="button-primary">Отправить</button>
+  </form>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+    <p>Тел: +7 (777) 777-77-77 | <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a> <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a></p>
+  </footer>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(-${index * 100}vw)`;
+    }, 10000);
+  </script>
+  <script>
+  function toggleMenu() {
+    document.querySelector('.main-nav').classList.toggle('show');
+    document.querySelector('.contact-info').classList.toggle('show');
+  }
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.category-card').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        card.classList.add('fade-in');
+      }
+    });
+  });
+</script>
+</body>
+</html>

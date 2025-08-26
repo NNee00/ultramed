@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн консультация | Центр лечения зависимостей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style/index_style.css">
+  <link rel="stylesheet" type="text/css" href="style/alco.css">  
+  <link rel="stylesheet" href="style/menu.css">
+  <style>
+
+
+    .main-content {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .main-content h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #0077b6;
+    }
+
+    form {
+      margin-top: 40px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    form h3 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      text-align: center;
+      color: #444;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #28a745;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="ico/logo1.png" alt="Логотип">
+      <h1>Центр лечения</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="mission.html">Наша миссия</a>
+      <a href="target.html">Наши цели</a>
+      <a href="prices.html">Цены</a>
+      <a href="blog.html">Блог</a>
+      <a href="onlinecons.html">Онлайн консультирование</a>
+    </nav>
+
+    <div class="contact-info">
+      <span class="phone">+7 (777) 777-77-77</span>
+      <div class="messengers">
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <button class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<section class="category-section">
+  <div class="category-grid">
+    <div class="category-card">
+      <h3><a href="alco.html">Лечение алкоголизм</a></h3>
+      <ul>
+        <li><a href="zapoi.html">выведение из запоя</a></li>
+        <li><a href="coding.html">кодирование</a></li>
+        <li><a href="selfhelp.html">самостоятельное лечение </a></li>
+        <li><a href="articles.html">статьи</a></li>
+        <li><a href="stacionaralco.html">лечение в стационаре</a></li>
+        <li><a href="doctor.html">вызов врача нарколога на дом</a></li>
+        <li><a href="prices.html">программы лечения алкоголизма / цены</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="narkomaniya.html">Лечение наркомании</a></h3>
+      <ul>
+        <li><a href="solevaya.html">лечение солевой зависимости</a></li>
+        <li><a href="mefedron.html">лечение мефедроновой зависимости</a></li>
+        <li><a href="dom.html">Лечение наркомании на дому </a></li>
+        <li><a href="stacionar.html">Лечение наркомании в стационаре </a></li>
+        <li><a href="reabilitaciya.html">Лечение в реабилитации  </a></li>
+        <li><a href="programmy.html">Программы/ цены </a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="ojirenie.html">Лечение ожирения</a></h3>
+      <ul>
+        <li><a href="soputstvuushie.html">Сопутствующие заболевания</a></li>
+        <li><a href="pitanie.html">Питание при ожирении</a></li>
+        <li><a href="programmy_ojir.html">лечебные программы </a></li>
+        <li><a href="online.html">Онлайн введение</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Методы/услуги/ цены </h3>
+      <ul>
+        <li><a href="alco.html">Алкоголизм </a></li>
+        <li><a href="narkomaniya.html">Наркомания  </a></li>
+        <li><a href="ojirenie.html">Ожирение </a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>В какие районы  СПБ и ЛО выезжают наши специалисты</h3>
+      <ul>
+        <li><a href="spd.html">СПБ . Стоимость  0 руб</a></li>
+        <li><a href="lo.html">Ленинградская область</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Почему стоит обратиться к нам</h3>
+      <ul>
+        <li>Подходи индивидуально</li>
+        <li>Анонимно</li>
+        <li>Опыт 30 лет </li>
+        <li>Сопровождение на всех этапах </li>
+        <li>За пациента отвечает один врач</li>
+        <li>Комплексно: лечим и зависимость и созависимость </li>
+        <li>онлайн ведение </li>
+        <li>Обучаем трезвости/ осознанности </li>
+        <li>Помогаем созависимым  </li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Бригадный метод</h3>
+      <ul>
+        <li><a href="brigadniy.html">Что это?</a></li>
+        <li><a href="brigadniy-benefits.html">Преимущества</a></li>
+      </ul>
+    </div>
+        <div class="category-card">
+      <h3>Бригадный метод</h3>
+      <ul>
+        <li><a href="brigadniy.html">Что это?</a></li>
+        <li><a href="brigadniy-benefits.html">Преимущества</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <div class="main-content">
+    <h2>Онлайн консультация</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto 40px;">
+      Мы предлагаем бесплатные и анонимные онлайн-консультации. Наши специалисты помогут вам разобраться в проблеме и подобрать оптимальный путь лечения, не выходя из дома.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Анонимность</h3>
+        <p>Все консультации проходят конфиденциально. Ваши данные полностью защищены.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-clock"></i>
+        <h3>Доступность 24/7</h3>
+        <p>Вы можете обратиться к нам в любое время, когда это действительно нужно.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Поддержка</h3>
+        <p>Мы оказываем психологическую и медицинскую поддержку онлайн.</p>
+      </div>
+    </div>
+
+    <form action="send_mail.php" method="POST">
+      <h3>Записаться на онлайн консультацию</h3>
+      <input type="text" placeholder="Ваше имя" name="name" required>
+      <input type="email" placeholder="Ваш email" name="email" required>
+      <input type="tel" name="phone" placeholder="Ваш телефон" required>
+      <textarea rows="5" placeholder="Ваш вопрос" required></textarea>
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </div>
+<div class="online-help">
+  <h3>Онлайн помощь 24/7</h3>
+  <p>Если вы не готовы говорить по телефону — напишите нам в мессенджеры. Наши специалисты ответят в любое время суток.</p>
+  <div class="messengers">
+    <a href="https://t.me/username" target="_blank" class="messenger telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
+    <a href="https://wa.me/77777777777" target="_blank" class="messenger whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+    <p>Тел: +7 (777) 777-77-77 | <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a> <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a></p>
+  </footer>
+
+  <script>
+    let index = 0;
+    const slides = document.getElementById('slides');
+    const total = slides.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % total;
+      slides.style.transform = `translateX(-${index * 100}vw)`;
+    }, 10000);
+  </script>
+  <script>
+  function toggleMenu() {
+    document.querySelector('.main-nav').classList.toggle('show');
+    document.querySelector('.contact-info').classList.toggle('show');
+  }
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.category-card').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        card.classList.add('fade-in');
+      }
+    });
+  });
+</script>
+</body>
+</html>
