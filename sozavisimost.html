@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Созависимость – лечение и онлайн консультации | Центр лечения зависимостей</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style/narko.css">
+  <link rel="stylesheet" type="text/css" href="style/alco.css">
+  <link rel="stylesheet" type="text/css" href="style/menu.css">
+  <style type="text/css">
+    .symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.symptom-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+.symptom-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Этапы терапии */
+.therapy-steps ol {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* Отзывы */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.review-card {
+  background: #fff5f5;
+  padding: 20px;
+  border-radius: 12px;
+  font-style: italic;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+.faq .faq-item {
+  margin-bottom: 20px;
+}
+.faq h3 {
+  cursor: pointer;
+  background: #eaf6ff;
+  padding: 10px;
+  border-radius: 8px;
+}
+.faq p {
+  margin: 10px 0 0;
+  padding: 0 10px;
+}
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="ico/logo1.png" alt="Логотип">
+      <h1>Центр лечения</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="mission.html">Наша миссия</a>
+      <a href="target.html">Наши цели</a>
+      <a href="prices.html">Цены</a>
+      <a href="blog.html">Блог</a>
+      <a href="onlinecons.html">Онлайн консультирование</a>
+    </nav>
+
+    <div class="contact-info">
+      <span class="phone">+7 (777) 777-77-77</span>
+      <div class="messengers">
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <button class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<section class="category-section">
+  <div class="category-grid">
+    <div class="category-card">
+      <h3><a href="alco.html">Лечение алкоголизм</a></h3>
+      <ul>
+        <li><a href="zapoi.html">выведение из запоя</a></li>
+        <li><a href="coding.html">кодирование</a></li>
+        <li><a href="selfhelp.html">самостоятельное лечение </a></li>
+        <li><a href="articles.html">статьи</a></li>
+        <li><a href="stacionaralco.html">лечение в стационаре</a></li>
+        <li><a href="doctor.html">вызов врача нарколога на дом</a></li>
+        <li><a href="prices.html">программы лечения алкоголизма / цены</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="narkomaniya.html">Лечение наркомании</a></h3>
+      <ul>
+        <li><a href="solevaya.html">лечение солевой зависимости</a></li>
+        <li><a href="mefedron.html">лечение мефедроновой зависимости</a></li>
+        <li><a href="dom.html">Лечение наркомании на дому </a></li>
+        <li><a href="stacionar.html">Лечение наркомании в стационаре </a></li>
+        <li><a href="reabilitaciya.html">Лечение в реабилитации  </a></li>
+        <li><a href="programmy.html">Программы/ цены </a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="ojirenie.html">Лечение ожирения</a></h3>
+      <ul>
+        <li><a href="soputstvuushie.html">Сопутствующие заболевания</a></li>
+        <li><a href="pitanie.html">Питание при ожирении</a></li>
+        <li><a href="programmy_ojir.html">лечебные программы </a></li>
+        <li><a href="online.html">Онлайн введение</a></li>
+      </ul>
+    </div>
+        <div class="category-card">
+      <h3><a href="sozavisimost.html">Созависимость</a></h3>
+      <ul>
+        <li><a href="what-sozavisimost.html">Что такое созависимость</a></li>
+        <li><a href="lechenie-sozavisimost.html">Лечение созависимости</a></li>
+        <li><a href="test-sozavisimost.html">Тесты на созависимость</a></li>
+        <li><a href="articles-sozavisimost.html">Статьи о созависимости</a></li>
+        <li><a href="online-sozavisimost.html">Индивидуальный онлайн консультант</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Методы/услуги/ цены </h3>
+      <ul>
+        <li><a href="alco.html">Алкоголизм </a></li>
+        <li><a href="narkomaniya.html">Наркомания  </a></li>
+        <li><a href="ojirenie.html">Ожирение </a></li>
+        <li><a href="sozavisimost.html">Созависимость</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>В какие районы  СПБ и ЛО выезжают наши специалисты</h3>
+      <ul>
+        <li><a href="spd.html">СПБ . Стоимость  0 руб</a></li>
+        <li><a href="lo.html">Ленинградская область</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Почему стоит обратиться к нам</h3>
+      <ul>
+        <li>Подходи индивидуально</li>
+        <li>Анонимно</li>
+        <li>Опыт 30 лет </li>
+        <li>Сопровождение на всех этапах </li>
+        <li>Комплексно: лечим и зависимость и созависимость </li>
+        <li>онлайн ведение </li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Бригадный метод</h3>
+      <ul>
+        <li><a href="brigadniy.html">Что это?</a></li>
+        <li><a href="brigadniy-benefits.html">Преимущества</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Вступительный блок -->
+<main class="content">
+<section class="intro">
+  <h2>Созависимость – что это и как лечить</h2>
+  <p>
+    Созависимость — это психологическое состояние, при котором жизнь человека
+    оказывается тесно связанной с зависимым близким. Чаще всего это проявляется
+    у родственников людей, страдающих алкоголизмом или наркоманией. Симптомы созависимости включают:
+  </p>
+  <ul>
+    <li>Навязчивый контроль за поведением близкого.</li>
+    <li>Собственные интересы и потребности уходят на второй план.</li>
+    <li>Чувство вины и страха оставить зависимого без помощи.</li>
+    <li>Эмоциональное выгорание и тревожность.</li>
+  </ul>
+</section>
+
+<!-- Коммерческий блок -->
+<section class="therapy-programs">
+  <h2>Программы лечения созависимости</h2>
+  <p>Мы предлагаем как очные консультации в Санкт-Петербурге, так и онлайн-программы для клиентов из любых регионов РФ.</p>
+
+  <div class="programs-grid">
+    <div class="program-card">
+      <h3>Индивидуальная терапия (СПБ)</h3>
+      <p>Стоимость: от 3000 руб. за сеанс</p>
+      <a href="#form" class="button-primary">Записаться</a>
+    </div>
+    <div class="program-card">
+      <h3>Онлайн-консультация</h3>
+      <p>Стоимость: от 2500 руб. за 60 минут</p>
+      <a href="#form" class="button-primary">Заказать онлайн встречу</a>
+    </div>
+  </div>
+</section>
+
+<!-- Симптомы и признаки -->
+<section class="symptoms">
+  <h2>Основные признаки созависимости</h2>
+  <div class="symptoms-grid">
+    <div class="symptom-card">
+      <h3>Навязчивый контроль</h3>
+      <p>Созависимый человек постоянно следит за действиями зависимого, теряя контроль над собственной жизнью.</p>
+    </div>
+    <div class="symptom-card">
+      <h3>Жертвенность</h3>
+      <p>Собственные желания и интересы отодвигаются на второй план ради спасения близкого.</p>
+    </div>
+    <div class="symptom-card">
+      <h3>Страх и тревога</h3>
+      <p>Появляется постоянное напряжение, чувство вины и страх «оставить без помощи».</p>
+    </div>
+    <div class="symptom-card">
+      <h3>Эмоциональное выгорание</h3>
+      <p>Человек перестаёт радоваться жизни, его состояние ухудшается вместе с зависимым.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Этапы терапии -->
+<section class="therapy-steps">
+  <h2>Этапы терапии при созависимости</h2>
+  <ol>
+    <li><strong>Диагностика состояния</strong> — психолог проводит тестирование и выявляет глубину проблемы.</li>
+    <li><strong>Формирование здоровых границ</strong> — обучение навыкам, как заботиться о себе и не «жить чужой жизнью».</li>
+    <li><strong>Работа с чувством вины</strong> — снижение тревожности и развитие уверенности.</li>
+    <li><strong>Выход из роли жертвы</strong> — человек начинает строить собственные планы и ценить свою жизнь.</li>
+    <li><strong>Поддержка</strong> — регулярные консультации и онлайн сопровождение для закрепления результата.</li>
+  </ol>
+</section>
+
+<!-- Блок отзывы -->
+<section class="reviews">
+  <h2>Отзывы клиентов</h2>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <p>«После консультаций я поняла, что моя жизнь тоже имеет ценность. Теперь я чувствую силы жить и помогать близкому без ущерба для себя.»</p>
+      <span>— Марина, 42 года</span>
+    </div>
+    <div class="review-card">
+      <p>«Созависимость разрушала мою семью. Благодаря терапии я смог вернуть уверенность и перестал полностью зависеть от состояния мужа.»</p>
+      <span>— Ирина, 36 лет</span>
+    </div>
+    <div class="review-card">
+      <p>«Онлайн-программа помогла даже на расстоянии. Это был первый шаг к новой жизни.»</p>
+      <span>— Анна, 29 лет</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <h2>Часто задаваемые вопросы</h2>
+  <div class="faq-item">
+    <h3>Можно ли справиться самостоятельно?</h3>
+    <p>Чаще всего самостоятельно человек углубляется в проблему. Поддержка специалиста ускоряет и облегчает процесс выздоровления.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Сколько длится курс?</h3>
+    <p>Минимальный курс — 5–8 встреч. В зависимости от состояния клиента длительность подбирается индивидуально.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Можно ли проходить терапию онлайн?</h3>
+    <p>Да, мы проводим консультации по видеосвязи. Это удобно для клиентов из регионов или при нехватке времени.</p>
+  </div>
+</section>
+
+<!-- Инфо блок -->
+<section class="article">
+  <h2>Почему важно лечить созависимость</h2>
+  <p>
+    Созависимость разрушает личность и препятствует выздоровлению зависимого. 
+    Работа с психологом помогает вернуть границы, снять чувство вины и 
+    научиться заботиться о себе. 
+  </p>
+</section>
+</main>
+
+<!-- Форма -->
+<section id="form" class="form-section">
+  <h2>Записаться на консультацию</h2>
+  <form action="send_mail.php" method="POST">
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+    <button type="submit" class="button-primary">Отправить</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+  <p>Тел: +7 (777) 777-77-77 |
+    <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a>
+    <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a>
+  </p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.main-nav').classList.toggle('show');
+    document.querySelector('.contact-info').classList.toggle('show');
+  }
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.category-card').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        card.classList.add('fade-in');
+      }
+    });
+  });
+</script>
+</body>
+</html>

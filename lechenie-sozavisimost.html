@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лечение созависимости | Центр лечения зависимостей</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style/narko.css">
+  <link rel="stylesheet" type="text/css" href="style/alco.css">
+  <link rel="stylesheet" type="text/css" href="style/menu.css">
+  <style type="text/css">
+    /* Списки и блоки */
+.symptoms ul, .therapy-steps ol {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+.symptoms li, .therapy-steps li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Программы */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.program-card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.program-card:hover {
+  transform: translateY(-5px);
+}
+.program-card h4 {
+  margin-bottom: 10px;
+}
+
+/* FAQ */
+.faq-block {
+  margin: 40px 0;
+}
+.faq-item {
+  background: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.faq-item h4 {
+  margin-bottom: 8px;
+  color: #0077cc;
+}
+
+/* Подписка */
+.subscribe {
+  text-align: center;
+  margin: 50px 0;
+  padding: 30px;
+  background: #eef7ff;
+  border-radius: 12px;
+}
+.subscribe input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 250px;
+  max-width: 80%;
+}
+.subscribe button {
+  padding: 12px 20px;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.subscribe button:hover {
+  background: #005fa3;
+}
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="ico/logo1.png" alt="Логотип">
+      <h1>Центр лечения</h1>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="mission.html">Наша миссия</a>
+      <a href="target.html">Наши цели</a>
+      <a href="prices.html">Цены</a>
+      <a href="blog.html">Блог</a>
+      <a href="onlinecons.html">Онлайн консультирование</a>
+    </nav>
+
+    <div class="contact-info">
+      <span class="phone">+7 (777) 777-77-77</span>
+      <div class="messengers">
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <button class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<section class="category-section">
+  <div class="category-grid">
+    <div class="category-card">
+      <h3><a href="alco.html">Лечение алкоголизм</a></h3>
+      <ul>
+        <li><a href="zapoi.html">выведение из запоя</a></li>
+        <li><a href="coding.html">кодирование</a></li>
+        <li><a href="selfhelp.html">самостоятельное лечение </a></li>
+        <li><a href="articles.html">статьи</a></li>
+        <li><a href="stacionaralco.html">лечение в стационаре</a></li>
+        <li><a href="doctor.html">вызов врача нарколога на дом</a></li>
+        <li><a href="prices.html">программы лечения алкоголизма / цены</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="narkomaniya.html">Лечение наркомании</a></h3>
+      <ul>
+        <li><a href="solevaya.html">лечение солевой зависимости</a></li>
+        <li><a href="mefedron.html">лечение мефедроновой зависимости</a></li>
+        <li><a href="dom.html">Лечение наркомании на дому </a></li>
+        <li><a href="stacionar.html">Лечение наркомании в стационаре </a></li>
+        <li><a href="reabilitaciya.html">Лечение в реабилитации  </a></li>
+        <li><a href="programmy.html">Программы/ цены </a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3><a href="ojirenie.html">Лечение ожирения</a></h3>
+      <ul>
+        <li><a href="soputstvuushie.html">Сопутствующие заболевания</a></li>
+        <li><a href="pitanie.html">Питание при ожирении</a></li>
+        <li><a href="programmy_ojir.html">лечебные программы </a></li>
+        <li><a href="online.html">Онлайн введение</a></li>
+      </ul>
+    </div>
+        <div class="category-card">
+      <h3><a href="sozavisimost.html">Созависимость</a></h3>
+      <ul>
+        <li><a href="what-sozavisimost.html">Что такое созависимость</a></li>
+        <li><a href="lechenie-sozavisimost.html">Лечение созависимости</a></li>
+        <li><a href="test-sozavisimost.html">Тесты на созависимость</a></li>
+        <li><a href="articles-sozavisimost.html">Статьи о созависимости</a></li>
+        <li><a href="online-sozavisimost.html">Индивидуальный онлайн консультант</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Методы/услуги/ цены </h3>
+      <ul>
+        <li><a href="alco.html">Алкоголизм </a></li>
+        <li><a href="narkomaniya.html">Наркомания  </a></li>
+        <li><a href="ojirenie.html">Ожирение </a></li>
+        <li><a href="sozavisimost.html">Созависимость</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>В какие районы  СПБ и ЛО выезжают наши специалисты</h3>
+      <ul>
+        <li><a href="spd.html">СПБ . Стоимость  0 руб</a></li>
+        <li><a href="lo.html">Ленинградская область</a></li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Почему стоит обратиться к нам</h3>
+      <ul>
+        <li>Подходи индивидуально</li>
+        <li>Анонимно</li>
+        <li>Опыт 30 лет </li>
+        <li>Сопровождение на всех этапах </li>
+        <li>Комплексно: лечим и зависимость и созависимость </li>
+        <li>онлайн ведение </li>
+      </ul>
+    </div>
+    <div class="category-card">
+      <h3>Бригадный метод</h3>
+      <ul>
+        <li><a href="brigadniy.html">Что это?</a></li>
+        <li><a href="brigadniy-benefits.html">Преимущества</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main class="content">
+  <!-- Вступление -->
+  <section class="intro">
+    <h2>Лечение созависимости</h2>
+    <p>
+      Созависимость – это состояние, при котором человек живет проблемами зависимого,
+      полностью подстраивает свою жизнь под него, теряя собственные границы и интересы.
+      Лечение направлено на восстановление личности, снятие тревожности и возвращение
+      к полноценной, гармоничной жизни. Мы используем психотерапию, когнитивно-поведенческие
+      техники, семейную терапию и группы поддержки.
+    </p>
+  </section>
+
+  <!-- Симптомы -->
+  <section class="symptoms">
+    <h3>Признаки созависимости</h3>
+    <ul>
+      <li>Навязчивый контроль над близким человеком</li>
+      <li>Отказ от собственных интересов и потребностей</li>
+      <li>Чувство вины и стыда за зависимого</li>
+      <li>Сильная тревожность и страх потерять отношения</li>
+      <li>Склонность к эмоциональному выгоранию</li>
+    </ul>
+  </section>
+
+  <!-- Этапы терапии -->
+  <section class="therapy-steps">
+    <h3>Этапы лечения</h3>
+    <ol>
+      <li><strong>Диагностика:</strong> определение уровня созависимости и сопутствующих состояний.</li>
+      <li><strong>Индивидуальная работа:</strong> формирование личных границ, снижение тревожности.</li>
+      <li><strong>Семейная терапия:</strong> работа с отношениями, снятие конфликтов.</li>
+      <li><strong>Группы поддержки:</strong> обмен опытом и совместное восстановление.</li>
+      <li><strong>Долгосрочное сопровождение:</strong> закрепление результата, обучение навыкам трезвой жизни.</li>
+    </ol>
+  </section>
+
+  <!-- Программы -->
+  <section class="therapy-programs">
+    <h3>Наши программы</h3>
+    <div class="programs-grid">
+      <div class="program-card">
+        <h4>Индивидуальная терапия (СПБ)</h4>
+        <p>Стоимость: от 3000 руб. за сеанс</p>
+        <a href="#form" class="button-primary">Записаться</a>
+      </div>
+      <div class="program-card">
+        <h4>Онлайн консультации</h4>
+        <p>Стоимость: от 2500 руб.</p>
+        <a href="#form" class="button-primary">Онлайн запись</a>
+      </div>
+      <div class="program-card">
+        <h4>Семейная терапия</h4>
+        <p>Стоимость: от 4500 руб. (1,5 часа)</p>
+        <a href="#form" class="button-primary">Записаться</a>
+      </div>
+      <div class="program-card">
+        <h4>Группы поддержки</h4>
+        <p>Стоимость: от 1000 руб. за занятие</p>
+        <a href="#form" class="button-primary">Узнать расписание</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-block">
+    <h3>Часто задаваемые вопросы</h3>
+    <div class="faq-item">
+      <h4>Можно ли лечить созависимость самостоятельно?</h4>
+      <p>Самостоятельная работа полезна, но чаще всего без специалиста
+      выйти из созависимости очень трудно. Рекомендуем комбинировать
+      литературу, группы поддержки и психотерапию.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Сколько длится терапия?</h4>
+      <p>В среднем от 3 до 6 месяцев, в зависимости от глубины проблемы
+      и готовности клиента к изменениям.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Помогаете ли вы родственникам зависимых?</h4>
+      <p>Да, у нас есть отдельные программы для родственников,
+      где мы учим сохранять собственные границы и снижать уровень стресса.</p>
+    </div>
+  </section>
+
+  <!-- Подписка -->
+  <section class="subscribe">
+    <h2>Хотите получать полезные статьи о созависимости?</h2>
+    <form action="subscribe.php" method="POST">
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <button type="submit" class="button-primary">Подписаться</button>
+    </form>
+  </section>
+
+  <!-- Форма -->
+  <section id="form" class="form-section">
+    <h2>Запишитесь на консультацию</h2>
+    <form action="send_mail.php" method="POST">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" name="phone" placeholder="Ваш телефон" required>
+      <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+      <button type="submit" class="button-primary">Отправить</button>
+    </form>
+  </section>
+</main>
+
+
+
+<div class="faq-link">
+  <p>Остались вопросы? <a href="faq.html">Смотрите раздел FAQ</a></p>
+</div>
+  <footer>
+    <p>&copy; 2025 Центр лечения зависимостей. Все права защищены.</p>
+    <p>Тел: +7 (777) 777-77-77 |
+      <a href="https://t.me/username" style="color:#1da1f2;"><i class="fab fa-telegram"></i></a>
+      <a href="https://wa.me/77777777777" style="color:#25D366;"><i class="fab fa-whatsapp"></i></a>
+    </p>
+  </footer>
+<script>
+  function toggleMenu() {
+    document.querySelector('.main-nav').classList.toggle('show');
+    document.querySelector('.contact-info').classList.toggle('show');
+  }
+</script>
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.category-card').forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        card.classList.add('fade-in');
+      }
+    });
+  });
+</script>
+</body>
+</html>
