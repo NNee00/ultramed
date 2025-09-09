@@ -383,6 +383,15 @@ footer a {
   color: white;
   font-size: 18px;
 }
+.fa-whatsapp {
+  color: green;
+  font-size: 22px;
+}
+
+.fa-telegram {
+  color: lightblue;
+  font-size: 22px;
+}
 
 .messenger {
   display: inline-block;
