@@ -311,6 +311,113 @@ header {
   text-decoration: underline;
 }
 
+.article-section {
+  background: #fff;
+  padding: 60px 20px;
+  margin: 50px auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.article-container h1, 
+.article-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+.article-container p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.check-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+.check-list li {
+  margin-bottom: 10px;
+}
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+.help-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.help-card h3 {
+  margin-bottom: 10px;
+}
+.help-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.help-card .btn:hover {
+  background: #219150;
+}
+.steps-list {
+  padding-left: 20px;
+  margin: 20px 0;
+}
+.steps-list li {
+  margin-bottom: 10px;
+}
+.faq-block p {
+  margin: 15px 0;
+}
+.cta-block {
+  text-align: center;
+  margin: 40px 0;
+  background: #f3f8f7;
+  padding: 30px;
+  border-radius: 12px;
+}
+.cta-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.cta-btn.primary {
+  background: #27ae60;
+  color: #fff;
+}
+.cta-btn.primary:hover {
+  background: #219150;
+}
+.cta-btn.secondary {
+  background: #e9ecef;
+  color: #2c3e50;
+}
+.cta-btn.secondary:hover {
+  background: #d6dbdf;
+}
+.article-footer {
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center;
+  color: #555;
+}
+
+
+
 /* ===== ВЫПАДАЮЩИЕ СПИСКИ (АККОРДЕОН) ===== */
 .category-card {
   background: #f9f9f9;
